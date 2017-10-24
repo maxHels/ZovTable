@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,10 +27,13 @@ namespace ZovTable
         public int Key { get; set; }
         public string Number { get; set; }
         public int ShipID { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime SDate { get; set; }
         public string Note { get; set; }
         public int State { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime LastEditDate { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime CreationDate { get; set; }
         public string rowguid { get; set; }
         public bool shipFromSborka { get; set; }
@@ -52,7 +56,9 @@ namespace ZovTable
         public string Number { get; set; }
         public int Qty { get; set; }
         public string AddedBy { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime AddedTime { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime LastEditDate { get; set; }
         public string rowguid { get; set; }
         public string orderOUID { get; set; }
@@ -78,11 +84,14 @@ namespace ZovTable
         public DateTime RegTime { get; set; }
         public string RegBy { get; set; }
         public bool RegAuto { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime ShippedTime { get; set; }
         public string ShippedBy { get; set; }
         public bool ShippedAuto { get; set; }
         public string AddedBy { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime AddedTime { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime LastEditDate { get; set; }
         public string rowguid { get; set; }
         public int isprinted { get; set; }
@@ -93,6 +102,7 @@ namespace ZovTable
         public bool isInsightShipped { get; set; }
         public bool AcceptedAuto { get; set; }
         public string AcceptedBy { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime AcceptedTime { get; set; }
         public virtual ICollection<Detail> Details { get; set; }
         public Pack()
@@ -114,10 +124,13 @@ namespace ZovTable
         public int Qty { get; set; }
         public int GTIN { get; set; }
         public int Serial { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime LastEditDate { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime CreationDate { get; set; }
         public string ForeignID { get; set; }
         public int Status { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime statusModfiedDate { get; set; }
         public int Length { get; set; }
         public int Width { get; set; }
